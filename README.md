@@ -2,7 +2,48 @@
 ### Unified Property Marketplaces and Smart Asset Ecosystem
 
 ---
+```mermaid
+graph LR
+    %% Advanced CSS Styling for Smoothness and Color
+    classDef userGateway fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff,rx:20,ry:20;
+    classDef coreApp fill:#1e1b4b,stroke:#818cf8,stroke-width:2px,color:#fff,rx:20,ry:20;
+    classDef aiEngine fill:#4c0519,stroke:#f43f5e,stroke-width:2px,color:#fff,rx:20,ry:20;
+    classDef cloudInfra fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#fff,rx:20,ry:20;
+    classDef dataLayer fill:#422006,stroke:#fb923c,stroke-width:2px,color:#fff,rx:20,ry:20;
+    
+    %% Link Styling (Sleek grey paths)
+    linkStyle default stroke:#64748b,stroke-width:2px,fill:none;
 
+    %% Free-floating Nodes with PropTech Icons
+    Tenant(["fa:fa-mobile-screen Tenant / Buyer App"]):::userGateway
+    Agent(["fa:fa-house-user Broker Dashboard"]):::userGateway
+    API(["fa:fa-network-wired PropTech API Gateway"]):::userGateway
+    
+    Market(["fa:fa-city Global Listing Engine"]):::coreApp
+    Transact(["fa:fa-file-signature Transaction Microservices"]):::coreApp
+    
+    Valuation(["fa:fa-chart-line AI Property Valuation"]):::aiEngine
+    Trend(["fa:fa-brain Market Trend Analysis"]):::aiEngine
+    
+    IoT(["fa:fa-wifi Smart Building IoT"]):::cloudInfra
+    Cloud(["fa:fa-server Elastic Cloud Infrastructure"]):::cloudInfra
+    
+    CRM(["fa:fa-users Salesforce PropTech"]):::dataLayer
+    Data(["fa:fa-database Unified Asset Ecosystem"]):::dataLayer
+
+    %% Flow Path Connections
+    Tenant == "Search/View" ==> API
+    Agent == "Manage Assets" ==> API
+    API -. "Secure Auth" .-> Transact
+    API ==> Market
+    Market ==> Valuation
+    Valuation -. "Market Feeds" .-> Trend
+    IoT ==> Cloud
+    Market ==> Cloud
+    Cloud ==> CRM
+    Trend ==> Data
+    CRM ==> Data
+```
 ![Status](https://img.shields.io/badge/Status-BD5A00?style=flat) ![Proprietary](https://img.shields.io/badge/Proprietary-FF8C00?style=flat) &nbsp; ![Industry](https://img.shields.io/badge/Industry-004B8D?style=flat) ![Real%20Estate](https://img.shields.io/badge/Real%20Estate-007FFF?style=flat) &nbsp; ![Architecture](https://img.shields.io/badge/Architecture-00695C?style=flat) ![Ecosystem](https://img.shields.io/badge/Ecosystem-26A69A?style=flat)
 
 This repository serves as a mission-critical engineering showcase by **Altynx**. It demonstrates a unified approach to modern Real Estate technology, focusing on high-velocity marketplaces, intelligent asset valuation, and IoT-driven property management.
